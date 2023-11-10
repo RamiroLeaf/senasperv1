@@ -1,0 +1,145 @@
+/* body {
+    background-color: orange;
+} */
+
+/** {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(orange, rgb(152, 113, 38));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 500px;
+    background: #fff;
+    border: 7px solid orangered;
+    padding: 7px;
+}
+
+h2 {
+    border-bottom: 1px solid rgb(58, 28, 17);
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+#palabra {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.letra {
+    height: 50px;
+    width: 50px;
+    border: 2px solid orange;
+    margin: 4px;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pintar {
+    background-color: #02bfa4;
+}
+
+.pintarError {
+    background-color: red;
+}
+
+h3 {
+    margin: 4px 0;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+h3 span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+button #button-game2 {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    background-color: blueviolet;
+    color: #ccc;
+    border: none;
+    border-radius: 20px;
+    font-weight: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+} */
+.custom-box2 {
+    /* cambie de 700 a 1000 */
+    max-width: 700px;
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+
+#palabra {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.letra {
+    height: 50px;
+    width: 50px;
+    border: 2px solid orange;
+    margin: 4px;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#button-game2 {
+    padding: 15px 45px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#asistencia-game2 {
+    max-width: 700px;
+    background-color: #fff;
+    margin: 0px auto;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+    line-height: 28px;
+}
+
+#game2-video {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.pintar {
+    background-color: #02bfa4;
+}
+
+.pintarError {
+    background-color: red;
+}

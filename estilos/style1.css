@@ -1,0 +1,334 @@
+/* body {
+    background-color: blue;
+} */
+
+
+/* -----------container no usado------------------ */
+/* .container {
+    width: 90%;
+    max-width: 37.5em;
+    background-color: #ffffff;
+    padding: 3em 0.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.8em;
+} */
+
+/* ----- Estilos para el header y el nav -----*/
+/*Logo*/
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+    color: white;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.container-header-inicio {
+    max-width: 1300px;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(87, 6, 6);
+}
+
+header .container-header-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ccc;
+}
+
+header a:hover {
+    color: blueviolet;
+}
+
+/*---------------*/
+
+
+h3#instruccion-g1 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 2em auto;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.8em;
+    color: #010c39;
+    margin-bottom: 0;
+}
+
+/* --------------------------- */
+.draggable-objects,
+.drop-points {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2em;
+}
+
+.draggable-image {
+    /* width: 8em; */
+    width: 15em;
+    cursor: move;
+    /* background-color: blue; */
+    /* display: flex; */
+}
+
+/* img de arriba - seria video */
+img {
+    /* width: 8em; */
+    width: 10em;
+    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+}
+
+.countries {
+    /* width: 10em;
+    height: 8em; */
+    width: 17em;
+    height: 15em;
+    display: grid;
+    place-items: center;
+    border: 0.25em dashed #010c39;
+    border-radius: 0.8em;
+}
+
+.dropped {
+    padding: 0;
+    background-color: #e5ffc8;
+}
+
+.controls-container {
+    /* CAMBIANDO DE ABSOLUTE A RELATIVE */
+    position: absolute;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    /* CAMBIANDO EL AZUL */
+    /* background-color: #5372ef; */
+    background-color: #ffc71b;
+    flex-direction: column;
+    top: 0;
+}
+
+.controls-container button {
+    font-size: 1.12em;
+    padding: 0.8em 1em;
+    border-radius: 0.2em;
+    border: none;
+    outline: none;
+    color: #010c39;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+}
+
+.controls-container p {
+    /*CAMBIANDO DE BLANCO A NEGRO*/
+    color: black;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+
+
+/* CAMBIANDO HIDE A HIDEN */
+.hide {
+    display: none;
+}
+
+/*Estilos para parrafo Introductorio*/
+.introduccion-proyecto {
+    padding: 6em 5em 0 1em;
+    border-bottom: 0;
+    background-color: #ccc;
+}
+
+#t-comenzar {
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+}
+
+#p-comenzar {
+    margin-top: 12px;
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: black;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/*Estilos para la seccion Induccion*/
+
+
+.induccion-container {
+    display: flex;
+    padding: 2em;
+    align-items: center;
+}
+
+.controls-container .termino-sena {
+    font-size: 26px;
+    color: black;
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+/* .controls-container .termino-sena p {
+    margin: 0;
+    padding-bottom: 50px;
+} */
+
+.controls-container .descripcion-sena {
+    font-size: 10px;
+    color: black;
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+/* .controls-container .imagen-bw-sena {
+    display: flex;
+    justify-content: center;
+} */
+
+/* ----------------------- */
+.flecha-estilo {
+    height: 3em;
+    width: 3em;
+    background-color: #ccc;
+    border-radius: 50%;
+    padding: 1em;
+    cursor: pointer;
+    margin: 0 1em 0 1em
+}
+
+/*Estilos para la seccion volver a verla Induccion*/
+.volver-induccion {
+    display: flex;
+    align-items: center;
+    margin-left: 3em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+/*boton ver Induccion*/
+#verInduccion {
+    border: 1px solid wheat;
+    padding: 6px;
+    margin-left: 4px;
+    background-color: #f1eded;
+    border-radius: 8px;
+    font-weight: lighter;
+    color: rgb(56, 53, 53);
+    cursor: pointer;
+}
+
+.volver-induccion h5 {
+    font-weight: 500;
+}
+
+/*Estilos para el STEP BY STEP*/
+/* .stepBox1 .custom-box1 {
+    margin: 0;
+}
+
+.custom-box1 {
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.step-box1.custom-box1 {
+    margin-top: 120px;
+    margin-bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 700px;
+}
+
+.step-box1.custom-box1 span {
+    border: 2px solid black;
+    padding: 6px;
+    margin: 0 15px;
+    box-shadow: 1px 2px 4px;
+    background-color: #ccc;
+}
+
+.step-box1.custom-box1 span.active {
+    background-color: orange;
+}
+
+.step-box1.custom-box1 span.pasive {
+    background-color: #ccc;
+}
+
+.step-box1.custom-box1 img {
+    height: 40px;
+    width: 40px;
+} */
+
+/*-------------------*/
+
+.flecha-estilo:hover {
+    background-color: #ffffff;
+}
+
+/* Responsive para el header y nav */
+@media(min-width:720px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        /*añadido flex-direction para que se ordene el footer*/
+        flex-direction: column;
+        /*-------------- SE AÑADIO MARGIN-TOP ----------*/
+        margin-top: 4.4em;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        /*añadido top 0 para que este arriba*/
+        top: 0;
+    }
+
+    header .container-header-inicio {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}

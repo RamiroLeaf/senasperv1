@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <div class="container-header-inicio">
+        <div class="logo">
+            <img src="imagenes-page/logo.png" alt="logo del proyecto">
+            <h2 class="nombre-proyecto">Proyecto <br> Señas <br> Peruano</h2>
+        </div>
+        <p class="logo"> Proyecto</p>
+        <nav>
+            <a href="#somos-pro-ya">Inicio</a>
+            <a href="#nuestros-programas">Proyecto</a>
+            <a href="#caracteristicas">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <!-- <nav>
+        <ul>
+            <li><a href="#app1">Aplicación 1</a></li>
+            <li><a href="#app2">Aplicación 2</a></li>
+            <li><a href="#app3">Aplicación 3</a></li>
+        </ul>
+    </nav> -->
+    <section id="app-inicio">
+
+    </section>
+    <section id="app1" class="app" style="display: none;">
+        <!-- Contenido de la Aplicación 1 -->
+        <!-- <link rel="stylesheet" type="text/css" href="estilos/style1.css"> -->
+
+        <!-- <div class="container"> -->
+
+        <div class="custom-box1" id="container-g1">
+            <h3 id="instruccion-g1">Mira cada uno de los videos y arrastrarlos a su respectivo concepto, cuando
+                aciertes, aparecerá la imagen en el recuadro</h3>
+            <div class="volver-induccion">
+                <h5>Si necesitas volver a la inducción inicial pulsa el botón: </h5>
+                <button id="verInduccion" onclick=stopGame()>Volver a ver Induccion</button>
+            </div>
+            <div class="draggable-objects"></div>
+            <div class="drop-points"></div>
+        </div>
+        <div class="controls-container">
+            <div class="introduccion-proyecto">
+                <h1 id="t-comenzar">COMENZAR</h1>
+                <p id="p-comenzar">El siguiente proyecto tiene como una de sus finalidades reducir las brechas
+                    comunicativas existentes entre la población
+                    con discapacidad auditiva y el resto de la sociedad, así como también estudiar los medios por
+                    el cual una persona pueda aprender a reconocer cierto vocabulario de esta lengua. Por lo que
+                    agradecemos su
+                    participación en este estudio.
+                    <br><br>
+                    Como primer paso Vea los videos de las seis señas con sus respectivos conceptos y formas
+                    de realizar la seña, sería valioso si intentara realizar la seña, sientase libre de ver y usar los
+                    videos como modelo para intentar reproducir la seña. Cuando se sienta listo pase a la siguiente
+                    sección, pulsando el botón
+                    <i>Comenzar</i> para pasar a una sección de dos ejericios lúdicos.
+
+                </p>
+            </div>
+            <div class="induccion-container custom-box1">
+                <img src="imagenes-page/cheuronleft.png" class="flecha-estilo" id="flechaAnterior" alt="flechaAnterior">
+                <div class="induccion-videos">
+                    <video src="videos-senas-bw/hospital-bw.mp4" width="420" height="240" controls />
+                </div>
+                <div class="induccion-textos">
+                    <div class="termino-sena">
+                        <p>Instrucciones:</p>
+                    </div>
+                    <div class="descripcion-sena">
+                        <p>1. Visualice los videos tratando de realizar las señas usted mismo como en este
+                            video de
+                            ejemplo <br>
+                            2. Tome como referencia el video y las descripciones, enfocandose en reconocer las señas
+                            <br>
+                            3. Cuando sienta haber comprendido las señas, haga click en <i>Paso Siguiente</i>
+                        </p>
+                    </div>
+                    <div class="imagen-bw-sena">
+
+                    </div>
+
+                </div>
+                <img src="imagenes-page/cheuron.png" class="flecha-estilo" id="flechaSiguiente" alt="flechaSiguiente">
+                <p id="result"></p>
+            </div>
+            <button id="start">Paso Siguiente</button>
+        </div>
+        <!-- Script -->
+        <!-- <script src="app1.js"></script> -->
+
+    </section>
+
+    <section id="app2" class="app" style="display: none;"">
+        <!-- Contenido de la Aplicación 2 -->
+        <!-- <link rel=" stylesheet" type="text/css" href="estilos/style2.css"> -->
+        <section class="custom-box2">
+            <h2 class="title-actividad">Adivina la Palabra</h2>
+            <div class="question-text1">
+                Si se acabaron los intentos para esa palabra, se marcara de color
+            </div>
+            <div id="game2-video">
+                <!-- <video src="videos-senas/baile.mp4" width="420" height="240" controls /> -->
+            </div>
+            <div id="palabra">
+                <div class="letra">G</div>
+                <div class="letra">U</div>
+                <div class="letra">I</div>
+                <div class="letra">T</div>
+                <div class="letra">A</div>
+                <div class="letra">R</div>
+                <div class="letra">R</div>
+                <div class="letra">A</div>
+            </div>
+            <div id="asistencia-game2">
+                <h3>Ayuda: <span id="ayuda">Instrumento Musical</span></h3>
+                <h3>Intentos restantes: <span id="intentos">5</span></h3>
+                <h3>Letras Ingresadas: <span id="letrasIngresadas">A-S</span></h3>
+            </div>
+
+
+            <button id="button-game2" onclick="cargarNuevaPalabra()">Nueva Palabra</button>
+
+        </section>
+
+    </section>
+
+    <section id="app3" class="app" style="display: none;"">
+        <!-- Contenido de la Aplicación 3 -->
+        <!-- <link rel=" stylesheet" type="text/css" href="estilos/style3.css"> -->
+        <section id="box">
+            <div class="step-box custom-box">
+                <div><span>INDUCCION </span></div>
+                <div><img src="imagenes-page/flecha.png" alt="flecha"></div>
+                <div><span class="active">PRUEBA </span></div>
+                <div><img src="imagenes-page/flecha.png" alt="flecha"></div>
+                <div><span>RESULTADO </span></div>
+            </div>
+            <div class="home-box custom-box">
+                <h3>Instrucciones:</h3>
+                <p>1. Elija el concepto de la seña correspondiente al video, <br>
+                    2. Si acerto se marcara verde y si no, se marcara roja y le indicará en verde la correcta <br>
+                    3. Podrá ver en la parte inferior sus aciertos <span class="total-questions"></span></p>
+                <button type="button" class="btn" onclick="startQuiz()">Comenzar Prueba</button>
+            </div>
+            <!-- <div class="step-box custom-box">
+                <div><span>INDUCCION </span></div>
+                <div><img src="imagenes-page/flecha.png" alt="flecha"></div>
+                <div><span>PRUEBA </span></div>
+                <div><img src="imagenes-page/flecha.png" alt="flecha"></div>
+                <div><span>RESULTADO </span></div>
+            </div> -->
+            <div class="quiz-box custom-box hide">
+                <div class="question-number">
+
+                </div>
+                <div class="question-text">
+
+                </div>
+                <div class="container-video-opciones">
+                    <div class="question-video">
+                        <!-- <video src="videos-senas/hospital.mp4" width="420" height="240" controls /> -->
+                    </div>
+                    <div class="option-container">
+
+                    </div>
+                </div>
+                <div class="next-question-btn">
+                    <button type="button" class="btn" onclick="next()">Siguiente</button>
+                </div>
+                <div class="answer-indicator">
+
+                </div>
+            </div>
+            <div class="result-box custom-box hide">
+                <h1>Resultado</h1>
+                <h2>Gracias por su participación</h2>
+                <table>
+                    <tr>
+                        <td>Número Preguntas</td>
+                        <td><span class="total-question"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Número de Respondidas</td>
+                        <td><span class="total-attempt"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Correctas</td>
+                        <td><span class="total-correct"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Incorrectas</td>
+                        <td><span class="total-wrong"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje Total</td>
+                        <td><span class="percentage"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Tu Puntuación Total</td>
+                        <td><span class="total-score">3 / 5</span></td>
+                    </tr>
+                </table>
+                <button type="button" class="btn" onclick="tryAgainQuiz()">Intentar de nuevo</button>
+                <button type="button" class="btn" onclick="goToHome()">Ver Instrucciones</button>
+            </div>
+        </section>
+        <!-- <script src="js/question.js"></script> -->
+    </section>
+    <section id="botonNav">
+        <button id="next-button"></button>
+    </section>
+
+
+    <!-- <script src="js/question.js"></script> -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

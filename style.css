@@ -1,0 +1,128 @@
+/* body {
+    background-color: burlywood;
+    /* display: flex; */
+/* flex-direction: column; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    background-color: #ffc71b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+}
+
+.custom-box1 {
+    /* cambie de 700 a 1000 */
+    max-width: 1000px;
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+
+/* .title-actividad h2 {
+    padding-top: 60px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ######## BOTON PRINCIPAL ###########*/
+
+#botonNav {
+    position: fixed 0 150;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#next-button {
+    /* background-color: blueviolet;
+    height: 2rem;
+    font-size: 1.5em;
+    padding: 30px;
+    border-radius: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: 400;
+    border: none;
+    box-shadow: 2px 4px 3px;
+    margin-top: 20px; */
+    background-color: #0074e4;
+    /* Color base azul */
+    color: #fff;
+    /* Texto blanco */
+    padding: 10px 20px;
+    /* Espaciado interior */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    /* cursor: pointer; */
+    /* Cambia el cursor al pasar el mouse */
+    font-size: 16px;
+    /* Tamaño del texto */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Sin subrayado en el texto */
+    display: inline-block;
+    /* Mostrar como elemento en línea */
+    transition: background-color 0.3s;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /*DISPLAY:NONE--------------------OCUALTAR BOTON AZUL-----------------------------------------------------*/
+    display: none;
+}
+
+/* --------------------------BOTON PARA NAVEGAR RAPIDO--------------*/
+
+#next-button:hover {
+    background-color: #005bc5;
+    /* Color azul más oscuro al pasar el mouse */
+}
+
+/* Estilo al hacer clic en el botón  */
+#next-button:active {
+    background-color: #003f8c;
+    /* Color azul aún más oscuro al hacer clic */
+}

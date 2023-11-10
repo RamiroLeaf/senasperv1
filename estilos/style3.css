@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* Estilos para el header y el nav */
+/*Logo*/
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+    color: white;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(87, 6, 6);
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ccc;
+}
+
+header a:hover {
+    color: blueviolet;
+}
+
+/*------COMENTANDO EL BODY---------*/
+body {
+    margin: 0;
+    font-size: 16px;
+    /* -----BACKGROUND ORIGINAL -----*/
+    /* background-color: #009688; */
+    /* -----BACKGROUND NARANJA -----*/
+    background-color: #ffc71b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    /*añadiendo display flex*/
+    /* display: flex;
+    justify-content: center; */
+    /* transform: scale(0.9);
+    transform-origin: top left; */
+}
+
+
+
+/* Estilos del home box */
+.custom-box {
+    max-width: 700px;
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.custom-box::before,
+.custom-box::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.custom-box.hide {
+    display: none;
+}
+
+.home-box {
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.home-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    color: #000;
+    font-weight: 400;
+}
+
+.home-box p span {
+    font-weight: 500;
+}
+
+.home-box .btn {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 45px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/*Estilos para el step box*/
+.stepBox .custom-box {
+    margin: 0;
+}
+
+/* Estilos del quizz box */
+
+/* .quiz-box {} */
+
+.quiz-box .question-number,
+.quiz-box .question-text,
+.quiz-box .option-container,
+.quiz-box .next-question-btn,
+.quiz-box .answer-indicator {
+    width: 100%;
+    float: left;
+}
+
+.quiz-box .question-number {
+    font-size: 18px;
+    color: #009688;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+
+.quiz-box .question-text {
+    font-size: 22px;
+    color: #000;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.quiz-box .question-text img {
+    max-width: 100%;
+    display: block;
+    margin-top: 15px;
+}
+
+.quiz-box .option-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quiz-box .option-container .option {
+    background-color: #ccc;
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    border-radius: 5px;
+    /*propiedad margin-right agregada*/
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+    /* -------- */
+    height: 180px;
+    width: 180px;
+}
+
+.quiz-box .option-container .option img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Deshabilitar el click en opciones */
+.quiz-box .option-container .option.already-answered {
+    pointer-events: none;
+}
+
+/*------- animacion para la respuesta correcta */
+
+/* .quiz-box .option-container .option.correct {
+    background-color: green;
+    color: white;
+} */
+.quiz-box .option-container .option.correct::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.quiz-box .option-container .option.correct {
+    color: white;
+}
+
+/*------- animacion para la respuesta incorrecta */
+.quiz-box .option-container .option.wrong::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+
+.quiz-box .option-container .option.wrong {
+    color: #fff;
+}
+
+/* --------------------- */
+.quiz-box .btn {
+    margin: 15px 0;
+}
+
+.quiz-box .answer-indicator {
+    border-top: 1px solid #ccc;
+}
+
+.quiz-box .answer-indicator div {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-top: 15px;
+}
+
+.quiz-box .answer-indicator div.correct {
+    background-color: green;
+    background-image: url(../imagenes-page/correct.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quiz-box .answer-indicator div.wrong {
+    background-color: red;
+    background-image: url(../imagenes-page/wrong.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilos result */
+.result-box {
+    text-align: center;
+}
+
+.result-box.hide {
+    display: none;
+}
+
+.result-box h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #009688;
+}
+
+.result-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.result-box table td {
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #000;
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.result-box .btn {
+    margin-right: 20px;
+}
+
+@media(max-width:767px) {
+    .result-box .btn {
+        margin-bottom: 15px;
+    }
+
+    body {
+        padding: 15px;
+    }
+}
+
+
+/*Footer*/
+footer {
+    background-color: rgb(230, 230, 230);
+}
+
+footer p {
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+
+footer .container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* ###### RESPONSIVE #########
+
+/* Responsive para el header y nav */
+@media(min-width:720px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        /*añadido flex-direction para que se ordene el footer*/
+        flex-direction: column;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        /*añadido top 0 para que este arriba*/
+        top: 0;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    .custom-box {
+        margin: 5px auto;
+        max-width: 900px;
+    }
+
+    .step-box.custom-box {
+        margin-top: 105px;
+        margin-bottom: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex: 1 1;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        width: 700px;
+    }
+
+    .step-box.custom-box span {
+        border: 2px solid black;
+        padding: 6px;
+        margin: 0 15px;
+        box-shadow: 1px 2px 4px;
+        background-color: #ccc;
+    }
+
+    .step-box.custom-box span.active {
+        background-color: orange;
+    }
+
+    .step-box.custom-box span.pasive {
+        background-color: #ccc;
+    }
+
+    .step-box.custom-box img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .quiz-box .option-container {
+        width: 30vw;
+    }
+
+    .quiz-box .container-video-opciones {
+        width: 100%;
+        display: flex;
+    }
+
+    .quiz-box .container-video-opciones .question-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quiz-box .option-container {
+        width: 50%;
+    }
+
+    .quiz-box .question-video {
+        width: 50%;
+    }
+
+    footer .container {
+        justify-content: flex-end;
+    }
+}
